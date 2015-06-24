@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="com/comcast/oscar/examples/doc/|com/comcast/oscar/examples/testfiles/|com/comcast/oscar/examples/|com/comcast/oscar/test/|com/comcast/oscar/interpreter/|com/comcast/oscar/parserbuilder/" kind="src" path="src"/>
+	<classpathentry excluding="com/comcast/oscar/examples/doc/|com/comcast/oscar/examples/testfiles/" kind="src" path="src"/>
 	<classpathentry kind="src" path="res"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry exported="true" kind="lib" path="lib/commons-cli-1.2.jar"/>
@@ -13,5 +13,6 @@
 	<classpathentry kind="lib" path="lib/jackson-annotations-2.5.0.jar"/>
 	<classpathentry kind="lib" path="lib/jackson-databind-2.5.3.jar"/>
 	<classpathentry kind="lib" path="lib/commons-collections4-4.0.jar"/>
+	<classpathentry kind="lib" path="lib/spark-2.2/config/spark-formatter-intellij.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
