@@ -2,7 +2,7 @@
 <classpath>
 	<classpathentry excluding="com/comcast/oscar/examples/doc/|com/comcast/oscar/examples/testfiles/" kind="src" path="src"/>
 	<classpathentry kind="src" path="res"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_45"/>
 	<classpathentry exported="true" kind="lib" path="lib/commons-cli-1.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/json-2.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/sqlite-jdbc-3.7.15-M1.jar"/>
@@ -14,5 +14,10 @@
 	<classpathentry kind="lib" path="lib/jackson-databind-2.5.3.jar"/>
 	<classpathentry kind="lib" path="lib/commons-collections4-4.0.jar"/>
 	<classpathentry kind="lib" path="lib/spark-core-2.2.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.7.11.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-simple-1.7.11.jar"/>
+	<classpathentry kind="lib" path="lib/servlet-api-2.5.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.jetty.server.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.jetty.util.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
