@@ -656,7 +656,7 @@ public class TlvBuilder implements TlvBuild {
 	}
 	
 	/**
-	 * @return This method returns a TlvBuild of the bytes contained */
+	 * @return This method returns a TlvBuild of the bytes contained of a TlvBuilder of 1 byte Length TLVs*/
 	@Override
 	public TlvBuilder clone() {
 			
