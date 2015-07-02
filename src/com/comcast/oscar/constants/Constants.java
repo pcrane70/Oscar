@@ -23,7 +23,19 @@ public class Constants {
 
 	private static final String TAB = "\t";
 	
-	public static final String OSCAR_VERSION = "2.1.3.2"; 
+	/**
+		Semantic Versioning 2.0.0<br>
+		http://semver.org/spec/v2.0.0.html<br>
+	
+		Given a version number MAJOR.MINOR.PATCH, increment the:<br>
+		MAJOR version when you make incompatible API changes,<br>
+		MINOR version when you add functionality in a backwards-compatible manner, and<br>
+		PATCH version when you make backwards-compatible bug fixes.<br>
+		Additional labels for pre-release and build metadata are available as extensions:<br>
+		
+		Format: MAJOR.MINOR.PATCH<br>
+	*/
+	public static final String OSCAR_VERSION = "2.2"; 
 	public static final String OSCAR_CLI_USAGE = "java -jar oscar.jar -k <key> -i <.txt> -o <.bin> -c";
 	public static final String OSCAR_CLI_HEADER = "/* OSCAR -> OpenSource Cable modem file AssembleR v" + OSCAR_VERSION + " */";
 	public static final String OSCAR_CLI_NO_ARGS = "Type --help for information";
