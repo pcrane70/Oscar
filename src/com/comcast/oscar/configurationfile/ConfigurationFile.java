@@ -616,8 +616,14 @@ public class ConfigurationFile {
 			e.printStackTrace();
 		}
 		
-		return tb;
-		
+		return tb;	
+	}
+	
+	/**
+	 * @return DeepCopy
+	 */
+	public ConfigurationFile clone(){
+		return new ConfigurationFile(this.iConfigurationFileType,this.tbConfigurationFile,this.sCmtsSharedSecretKey,this.sConfigurationFileName);
 	}
 	
 	/**
