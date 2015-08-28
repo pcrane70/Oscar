@@ -104,8 +104,13 @@ public class ConfigurationFileExport {
 	 */
 	public ConfigurationFileExport (File fTLV) {
 	
-		//Convert to Byte Array
-		this.bTLV = HexString.fileToByteArray(fTLV);
+		//Convert to Byte Array	
+		/*Making sure the DOCSIS type file is divisable by 4*/			
+		if (bTLV[0] != PacketCableConstants.FILE_MARKER) {
+			this.bTLV = ConfigurationFile.zeroPaddvBuffer(HexString.fileToByteArray(fTLV),4);
+		} else {
+			this.bTLV = HexString.fileToByteArray(fTLV);	
+		}
 		
 		if (debug) 
 			System.out.println("ConfigrationFileExport() -> FileByteLength: " +   this.bTLV.length);
@@ -148,6 +153,11 @@ public class ConfigurationFileExport {
 					
 			//Convert to Byte Array
 			this.bTLV = HexString.fileToByteArray(fTLV);
+			
+			/*Making sure the DOCSIS type file is divisable by 4*/			
+			if (bTLV[0] != PacketCableConstants.FILE_MARKER) {
+				this.bTLV = ConfigurationFile.zeroPaddvBuffer(HexString.fileToByteArray(fTLV),4);
+			}
 			
 			if (debug) 
 				System.out.println("ConfigrationFileExport(f,i) -> FileByteLength: " +   this.bTLV.length);

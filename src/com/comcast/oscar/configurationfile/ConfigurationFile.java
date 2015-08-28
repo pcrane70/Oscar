@@ -1,5 +1,6 @@
 package com.comcast.oscar.configurationfile;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -61,6 +62,8 @@ public class ConfigurationFile {
 	private String sConfigurationFileName = "";	
 	private File fConfigurationFileName = null;	
 	private Map<Integer,Integer> miiTypeToByteLengh = null;
+	
+	private static final byte NULL = (byte) 0x00;
 	
 	public static final Integer DOCSIS_VER_10 	= ConfigurationFileTypeConstants.DOCSIS_10_CONFIGURATION_TYPE;
 	public static final Integer DOCSIS_VER_11 	= ConfigurationFileTypeConstants.DOCSIS_11_CONFIGURATION_TYPE;
@@ -335,9 +338,7 @@ public class ConfigurationFile {
 			
 			dpoeConfigurationFile.commit();
 		}
-		
-		
-		 		
+				 		
 	}
 
  	/**
@@ -681,6 +682,36 @@ public class ConfigurationFile {
 
 		return tb;
 
+	}
+	
+	/**
+	 * 
+	 * @param bTlvArray
+	 * @param iBufferDivisibleBy
+	 * @return
+	 */
+	static public byte[] zeroPaddvBuffer (byte[] bTlvArray, int iBufferDivisibleBy) {
+		
+		boolean localDebug = Boolean.FALSE;
+		
+		ByteArrayOutputStream  baosbTlvArray = new ByteArrayOutputStream();
+		
+		try {
+			baosbTlvArray.write(bTlvArray);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		//Make sure TLV Buffer is divisible by iBufferDivisibleBy 
+		while ((baosbTlvArray.size()%iBufferDivisibleBy) != 0) {
+			
+			if (localDebug)
+				System.out.println("ConfigurationFile.zeroPaddvBuffer() - Adding Padding");
+			
+			baosbTlvArray.write(NULL);
+		}
+		
+		return baosbTlvArray.toByteArray();
 	}
 	
 	/* ******************************************************************************************

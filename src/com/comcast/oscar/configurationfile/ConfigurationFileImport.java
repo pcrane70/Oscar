@@ -78,8 +78,7 @@ public class ConfigurationFileImport {
 	
 	/**
 	 * 
-	 * @param fConfigfile
-	
+	 * @param fConfigfile	
 	 * @throws FileNotFoundException * @throws ConfigrationFileException
 	 */
 	public ConfigurationFileImport (File fConfigfile) throws FileNotFoundException , ConfigurationFileException {
@@ -100,9 +99,7 @@ public class ConfigurationFileImport {
 	
 	/**
 	 * 
-	 * @param bConfigfile
-	
-	
+	 * @param bConfigfile	
 	 * @throws NullPointerException * @throws ConfigrationFileException  */
 	public ConfigurationFileImport (byte[] bConfigfile) throws NullPointerException, ConfigurationFileException {
 		
